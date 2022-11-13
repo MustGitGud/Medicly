@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4D8"
+    tools:context=".MainActivity">
+
+        <ImageButton
+            android:id="@+id/backBtnHR"
+            android:layout_width="55dp"
+            android:layout_height="57dp"
+            android:background="#FCE4D8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+
+        <GridLayout
+            android:id="@+id/gridLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/black_border"
+            android:useDefaultMargins="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profPicUser"
+            app:layout_constraintTop_toTopOf="parent">>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName5"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:text="Age:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName7"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:text="Sex:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/sexSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0" />
+        </GridLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_acc"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.431" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="fill_parent"
+            android:layout_height="450dp"
+            android:background="@drawable/roundstyle"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/medInfoTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/sg_bold"
+                    android:text="Medical Info"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btnAllergy"
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FF3636"
+                    android:drawableLeft="@drawable/ic_allergy"
+                    android:fontFamily="@font/sg_medium"
+                    android:paddingLeft="10dp"
+                    android:text="Allergies"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btnCon"
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#428AF6"
+                    android:drawableLeft="@drawable/ic_dgs"
+                    android:fontFamily="@font/sg_medium"
+                    android:paddingLeft="10dp"
+                    android:text="Diagnosis/Conditions"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="31sp" />
+
+                <Button
+                    android:id="@+id/btnMeds"
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#66d453"
+                    android:drawableLeft="@drawable/ic_meds"
+                    android:fontFamily="@font/sg_medium"
+                    android:paddingLeft="10dp"
+                    android:text="Medications"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="38sp" />
+
+                <Button
+                    android:id="@+id/btnDoc"
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:background="#FAB93C"
+                    android:drawableLeft="@drawable/ic_doc"
+                    android:fontFamily="@font/sg_medium"
+                    android:paddingLeft="10dp"
+                    android:text="Doctor's Profile"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="31sp" />
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

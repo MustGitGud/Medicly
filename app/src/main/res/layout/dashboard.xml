@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FCE4D8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/roundstyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout">
+
+            <ImageButton
+                android:id="@+id/extBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#F75590"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_logout" />
+
+            <TextView
+                android:id="@+id/SgnOutTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Sign Out"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:useDefaultMargins="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/medRecBtn"
+                android:layout_width="162dp"
+                android:layout_height="170dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/curve_borders"
+                android:drawableBottom="@drawable/ic_medical_records"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:text="Medical Records"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/medCliLocBtn"
+                android:layout_width="162dp"
+                android:layout_height="170dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:background="@drawable/curve_borders"
+                android:drawableBottom="@drawable/ic_google_map"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:text="Medical Clinic Locator"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/AppSchedBtn"
+                android:layout_width="162dp"
+                android:layout_height="170dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:background="@drawable/curve_borders"
+                android:drawableBottom="@drawable/ic_calendar"
+                android:gravity="center"
+                android:paddingBottom="15sp"
+                android:text="Appointment Scheduling"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/AccSetBtn"
+                android:layout_width="162dp"
+                android:layout_height="170dp"
+                android:background="@drawable/curve_borders"
+                android:drawableBottom="@drawable/ic_settings"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:text="Account Settings"
+                android:textSize="20sp" />
+
+
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sg_bold"
+        android:text="Dashboard"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sg_medium"
+        android:text="Welcome User!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
